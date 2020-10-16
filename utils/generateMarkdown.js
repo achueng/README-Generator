@@ -1,6 +1,9 @@
 // function to generate markdown for README
+// returns format & general content
 function generateMarkdown(data) {
   return `# ${data.title}
+
+  ${licenseBadge}
 
   ## Description
 
