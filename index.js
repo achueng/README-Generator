@@ -65,8 +65,6 @@ const questions = [
 
 ];
 
-// console.log(questions);
-
 // function to return string to add to README
 // License badges from: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 function getBadge(license){
@@ -91,33 +89,28 @@ function getBadge(license){
     };
 }
 
-
-// function to write README file, need to require built in fs
+// function to write README file, require built in fs pkg
 function writeToFile(fileName, data) {
-    // use fs.writeFile() to write file --> README.md
+    // use fs.writeFile() to write file --> will be README.md
     fs.writeFile(fileName, generateMarkdown(data), function(error){
         if (error) {
             throw error;
         }
         console.log("Your input has been written to the README.md file successfully.");
     });
-    // generateMarkdown(data);
 }
 
 // function to initialize program
 function init() {
-    // ask inquirer stuff -> use inquirer.prompt(questions).then(data)
+    // ask user questions -> use inquirer.prompt(questions).then(data)
     inquirer
     .prompt(questions)
     .then(function(data) {
-        // console.log(data); // yields object
         // call getBadge function to add badge to markdown file
         licenseBadge = getBadge(data.license);
-        // call function writeToFile(fileName, data);
+        // call writeToFile function to write file -- README.md
         writeToFile("README.md", data);
-        // fileName will be README.md, data will reference the response from asking inquirer stuff
     });
-
 }
 
 // function call to initialize program
