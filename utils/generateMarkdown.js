@@ -4,6 +4,8 @@ function generateMarkdown(data) {
 
   ## Description
 
+  ${data.description}
+
   ## Table of Contents
     1. Installation
     2. Usage
@@ -14,17 +16,29 @@ function generateMarkdown(data) {
 
   ## Installation
 
+  ${data.installation}
+
   ## Usage
+
+  ${data.usage}
 
   ## License
 
+  ${data.license}
+
   ## Contributing
+
+  ${data.contributing}
 
   ## Tests
 
+  ${data.tests}
+
   ## Questions
 
-
+  ${data.github}
+  ${data.name}
+  ${data.email}
 
 `;
 }
