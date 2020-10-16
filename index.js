@@ -86,10 +86,10 @@ function init() {
     .prompt(questions)
     .then(function(data) {
         // console.log(data); // yields object
-    });
-    // call function writeToFile(fileName, data);
+        // call function writeToFile(fileName, data);
+        writeToFile("README.md", data);
         // fileName will be README.md, data will reference the response from asking inquirer stuff
-
+    });
 
 }
 
