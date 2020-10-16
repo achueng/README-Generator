@@ -36,7 +36,8 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  Please visit https://github.com/${data.github} to learn more about this project and the developer. \n
+  Please visit https://github.com/${data.github} to learn more about this project and the developer.
+  
   If there are any question, issues, or concerns, please contact ${data.name} via email at [${data.email}](mailto:${data.email}).
 `;
 }
