@@ -7,12 +7,12 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-    1. Installation
-    2. Usage
-    3. License
-    4. Contributing
-    5. Tests
-    6. Questions
+  1. Installation
+  2. Usage
+  3. License
+  4. Contributing
+  5. Tests
+  6. Questions
 
   ## Installation
 
@@ -36,10 +36,8 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  ${data.github}
-  ${data.name}
-  ${data.email}
-
+  Please visit https://github.com/${data.github} to learn more about this project and the developer. \n
+  If there are any question, issues, or concerns, please contact ${data.name} via email at [${data.email}](mailto:${data.email}).
 `;
 }
 
