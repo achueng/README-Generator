@@ -71,6 +71,11 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
     // ask inquirer stuff -> use inquirer.prompt(questions).then(data)
+    inquirer
+    .prompt(questions)
+    .then(function(data) {
+        // console.log(data); // yields object
+    });
     // call function writeToFile(fileName, data);
         // fileName will be README.md, data will reference the response from asking inquirer stuff
 
