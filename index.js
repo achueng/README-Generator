@@ -69,8 +69,14 @@ const questions = [
 
 // function to write README file, need to require built in fs
 function writeToFile(fileName, data) {
-    // something to do with file --> README.md
-    generateMarkdown(data);
+    // use fs.writeFile() to write file --> README.md
+    fs.writeFile(fileName, generateMarkdown(data), function(error){
+        if (error) {
+            throw error;
+        }
+        console.log("Your input has been written to the README.md file successfully.");
+    });
+    // generateMarkdown(data);
 }
 
 // function to initialize program
